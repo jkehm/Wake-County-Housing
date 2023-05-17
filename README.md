@@ -1,5 +1,9 @@
 # Group 9 Final Project
 ## Housing Market in Wake County
+# Team members and Branch links:
+- Maria Cheema: [branch](https://github.com/jkehm/group9/tree/MC.-Final-Project)
+- Justin Kehm: [branch](https://github.com/jkehm/group9/tree/JAK_Branch)
+- Justin Allen: [branch](https://github.com/jkehm/group9/tree/Segment-1-JRA)
 #### Communication Protocols
 * **Regular check-ins:** Schedule regular check-ins to discuss the progress of the project and any issues that have arisen. This will mostly be done through Slack.
 * **Task allocation:** Assign specific tasks to each team member and set deadlines for completion.
