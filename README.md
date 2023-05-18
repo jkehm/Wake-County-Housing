@@ -52,6 +52,10 @@ Instead, there are plenty of different clusters within our dataset that we can u
 
 #### Database and ERD
 
+A rough sketch of our Database Tables:
+![ERD_WakeCountyv2](https://github.com/jkehm/group9/assets/119149740/cf342914-9196-4c51-b34a-f8947d22e8f2)
+
+Using PostgreSQL created 3 tables: Cleaned Wake County dataset, Square Feet by Year, and Sale Price by Year
 
 
 #### Technologies, Languages, and Tools used
