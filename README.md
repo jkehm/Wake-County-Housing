@@ -4,7 +4,7 @@
 - Maria Cheema: [branch](https://github.com/jkehm/group9/tree/MC.-Final-Project)
 - Justin Kehm: [branch](https://github.com/jkehm/group9/tree/JAK_Branch)
 - Justin Allen: [branch](https://github.com/jkehm/group9/tree/Segment-1-JRA)
-#### Communication Protocols
+## Communication Protocols
 * **Regular check-ins:** Schedule regular check-ins to discuss the progress of the project and any issues that have arisen. This will mostly be done through Slack.
 * **Task allocation:** Assign specific tasks to each team member and set deadlines for completion.
 * **Clear communication channels:** Use clear and direct communication channels to avoid any misunderstandings. Email, chat, and video conferencing can all be used depending on the nature of the communication. For voice/video calls we will utilize a Meeting Notes Google Doc that will serve as a living document throughout the projects life. 
@@ -13,6 +13,33 @@
 * **Respectful communication:** Ensure that all team members communicate respectfully and professionally at all times. This will help maintain a positive and productive team environment.
 * **Conflict resolution:** Have a process in place for resolving conflicts that may arise during the project.
 
-# Overview of the topic:
-# Reason:
-# Questions:
+
+
+# Overview of the topic and our Data:
+#### Introduction
+Our team members are all from the Raleigh area, or currently reside there. We all wanted to work on something that is personal to us, and something we can relate to. The housing market in general has been nothing short of hectic the last few years and Raleigh is one of the most rapidly growing cities in the United States. The team is curious to see if this rapid growth has been reflected in the housing market, and if we can offer some insight to the people moving to the Triangle. 
+
+#### The Data
+This dataset was pulled from the Wake County Government website. Which can be found [here](https://www.wake.gov/departments-government/tax-administration/data-files-statistics-and-reports/real-estate-property-data-files).
+The dataset contains data for all recorded Real Estate history in Wake County up to 5/13/2023 (the day we downloaded the .csv file). This leaves the team with a very large dataset, and a lot of data that is not relevant to us. The dataset size before any cleaning was performed is 439,031 rows x 87 columns. A lot of these columns were either missing data completely, had a lot of null values, or was not relevant to our project goals. The team dropped most of the columns we started with. The steps the team used for our data cleaning is below, and the Jupyter Notebook that was used can be found [here](https://github.com/jkehm/group9/blob/main/Notebooks/Cleaning_Data_JAK.ipynb)
+
+* Figure out dimensions of the entire dataset
+* Look which columns could be relevant to our analysis
+* Create a new dataframe with the relevant columns
+* Check to see how many null values we have
+* Drop all null values if our new dataset is still large enough after dropping nulls
+* The next step was to drop all rows that did not have a TYPE_AND_USE of 1. Which is coded to mean a One Family residental style Real Estate. 
+* Check data types, and change zip code to object, and Sale Date to datetime
+* Split the datetime formatted date into seperate Year, Month, and Day columns
+* Dropped the Day column since it will not be relevant
+* Created a Quarter column to add to potential trends in selling in certain months, or maybe quarters
+* Exported dataset
+
+#### Questions the Team wants to answer with this data:
+* Create a machine learning model that can predict the price of a house given certain input data
+* Range and Average of Total Sales price
+* How has average Sales Price changed over the years?
+* Does the month or quarter that a house is sold in impact the price?
+* Which factors are the most influential to the sales price?
+* Which Zip code or City has the highest or Lowest average Sales Price?
+* Over the decades, which Zip Code or City has seen the largest increase in Sales Price?
