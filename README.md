@@ -43,3 +43,24 @@ The dataset contains data for all recorded Real Estate history in Wake County up
 * Which factors are the most influential to the sales price?
 * Which Zip code or City has the highest or Lowest average Sales Price?
 * Over the decades, which Zip Code or City has seen the largest increase in Sales Price?
+
+#### Machine Learning Model
+
+The way this dataset is designed does not allow for a Supervised Learning Classification model. This is because there is no discrete outcome for this data. 
+
+Instead, there are plenty of different clusters within our dataset that we can utilize. We can perform clustering with the K-Means Algorithm. We would define the number of clusters (k) as the number of unique cities or zip codes we have. Once this has been clustered, we can see if there are any other relationships between other inputs, such as Sold Price for homes. From here we will be able to create several different visualitzations with the machine learning data. 
+
+#### Database and ERD
+
+
+
+#### Technologies, Languages, and Tools used
+* Jupyter Notebook
+* Pandas
+* Numpy
+* MatPlotLib
+* Scikit-learn library
+* Google Drive including Google Slides and Goolge Docs
+* GitHub
+* PostgreSQL
+* Tableau
