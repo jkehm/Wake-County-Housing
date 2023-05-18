@@ -55,7 +55,13 @@ Instead, there are plenty of different clusters within our dataset that we can u
 A rough sketch of our Database Tables:
 ![ERD_WakeCountyv2](https://github.com/jkehm/group9/assets/119149740/cf342914-9196-4c51-b34a-f8947d22e8f2)
 
-Using PostgreSQL created 3 tables: Cleaned Wake County dataset, Square Feet by Year, and Sale Price by Year
+Using PostgreSQL created 3 tables: Cleaned Wake County dataset, and Square Feet by Year and Sale Price by Year based off of the cleaned dataset. Also downloaded the tables to be included in further analysis.
+
+After importing the cleaned Wake County dataset into SQL we created a table using the following headers and syntax:
+
+    CREATE TABLE Wake_County_SalePrices AS
+	    Select REAL_ESTATE_ID, Year_Built, PHYSICAL_CITY, PHYSICAL_ZIP_CODE, Total_sale_Price, year, month
+	    FROM Cleaned_WC_Data;
 
 
 #### Technologies, Languages, and Tools used
