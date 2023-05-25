@@ -84,16 +84,27 @@ Instead, there are plenty of different clusters within our dataset that we can u
 
 #### Database and ERD
 
-A rough sketch of our Database Tables:
-![ERD_WakeCountyv2](https://github.com/jkehm/group9/assets/119149740/cf342914-9196-4c51-b34a-f8947d22e8f2)
+ERD:
 
-Using PostgreSQL created 3 tables: Cleaned Wake County dataset, and Square Feet by Year and Sale Price by Year based off of the cleaned dataset. Also downloaded the tables to be included in further analysis.
+![QuickDBD-export](https://github.com/jkehm/group9/assets/119149740/3f704f05-f847-465d-b6c8-266ebc6b4bff)
 
-After importing the cleaned Wake County dataset into SQL we created a table using the following headers and syntax:
 
-    CREATE TABLE Wake_County_SalePrices AS
-	    Select REAL_ESTATE_ID, Year_Built, PHYSICAL_CITY, PHYSICAL_ZIP_CODE, Total_sale_Price, year, month
-	    FROM Cleaned_WC_Data;
+Using PostgreSQL created the three tables shown in the ERD. After creating those three tables, imported the cleaned csv files into the tables making sure the headers and data types aligned. Once those were successfully processed used queries to build more tables in our Final Project schema. The goal was to show information related to the Wake County cities, averages sale prices and square footage, and population.
+
+- 1963 to 15 May 2023 Wake County Sale Price csv [here]
+- Wake County Sale Price Last Decade csv [here]
+- Wake County Population 2020 csv [her]
+
+A query to take the Physical City using the last decade to create a table showing the averages sale prce and heated area (square footage) by year.
+
+	SELECT "PHYSICAL_CITY",
+		year,
+		COUNT(*) AS How_Many,
+		AVG("Total_sale_Price") as Avg_Sale_Price,
+		AVG("HEATED_AREA") as Avg_SqFt
+	FROM "Last_Decade_WakeCounty"
+	GROUP BY "PHYSICAL_CITY", year
+	ORDER BY year ASC;
 
 
 #### Technologies, Languages, and Tools used
