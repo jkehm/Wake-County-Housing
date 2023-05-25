@@ -91,11 +91,11 @@ ERD:
 
 Using PostgreSQL created the three tables shown in the ERD. After creating those three tables, imported the cleaned csv files into the tables making sure the headers and data types aligned. Once those were successfully processed used queries to build more tables in our Final Project schema. The goal was to show information related to the Wake County cities, averages sale prices and square footage, and population.
 
-- 1963 to 15 May 2023 Wake County Sale Price csv [here]
-- Wake County Sale Price Last Decade csv [here]
-- Wake County Population 2020 csv [her]
+- Year 1963 to 15 May 2023 Wake County Sale Price Data csv [here](https://github.com/jkehm/group9/blob/main/Resources/cleaned_wake_w_date_df.csv)
+- Last Decade Wake County Sale Price Data csv [here](https://github.com/jkehm/group9/blob/main/Resources/last_decade_df.csv)
+- Wake County Population 2020 csv [here](https://github.com/jkehm/group9/blob/main/Resources/Clean_WCpopulation-estimates.csv)
 
-A query to take the Physical City using the last decade to create a table showing the averages sale prce and heated area (square footage) by year.
+Example query to take the Physical City using the last decade to create a table showing the averages sale prce and heated area (square footage) by year.
 
 	SELECT "PHYSICAL_CITY",
 		year,
