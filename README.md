@@ -19,7 +19,7 @@
 #### Introduction
 Our team interest is to work on something that is personal to us, and something we can relate to. With that in mind, our team members are all from a city in Wake County, or currently reside there. For those not familiar with Wake County, it contains North Carolina's capital city, Raleigh, as well as other popular cities Cary, Apex, Holly Springs, and Morrisville. The housing market has been nothing short of hectic the last few years and Raleigh is one of the most rapidly growing cities in the United States. The team is curious to see if this rapid growth has been reflected in the housing market, and if we can offer some insight to the people moving to the Triangle. 
 
-#### The Data
+#### Data Exploration and Cleaning Phase
 This dataset was pulled from the Wake County Government website. Which can be found [here](https://www.wake.gov/departments-government/tax-administration/data-files-statistics-and-reports/real-estate-property-data-files).
 The dataset contains data for all recorded Real Estate history in Wake County up to 5/13/2023 (the day we downloaded the .csv file). This leaves the team with a very large dataset, and a lot of data that is not relevant to us. The dataset size before any cleaning was performed is 439,031 rows x 87 columns. A lot of these columns were either missing data completely, had a lot of null values, or was not relevant to our project goals. The team dropped most of the columns we started with. The steps the team used for our data cleaning is below, and the Jupyter Notebook that was used can be found [here](https://github.com/jkehm/group9/blob/main/Notebooks/Cleaning_Data_JAK.ipynb)
 
@@ -33,7 +33,39 @@ The dataset contains data for all recorded Real Estate history in Wake County up
 * Split the datetime formatted date into seperate Year, Month, and Day columns
 * Dropped the Day column since it will not be relevant
 * Created a Quarter column to add to potential trends in selling in certain months, or maybe quarters
-* Exported dataset
+* Looked through data and realized we have quite a few outliers
+* Created cutoffs for all values below 0.04 acres and above 3.06 acres (5th and 99th percentile of data)
+* Removed Total_Sales_Price if less than $15,000 and greater than $1,050,000 (1st and 99th percentile of data)
+* Dropped rows where Zip Code was equal to 0
+* Created subdatasets for the 1990's, 2000's, 2010's, 2020's, and the last decade
+* Exported datasets
+
+#### Data Analysis Phase
+Once the data was cleaned the team was able to dig further into the data and start looking for relationships between data points, and create some visualizations. Below are two scatter plots. The first one shows the Total Sale Price vs Total Heated area. Once the team applied filters to remove outliers our data looked much more precise than it had previously. 
+
+<p align="center">
+   <img width="720" height="480"  src="https://github.com/jkehm/group9/blob/main/Images/Total%20Sale%20Price%20vs%20Total%20Square%20Foot%20Scatter.png">
+</p>
+
+The next visualization that the team worked on was creating a time series for House Sale price by year, which can be seen below. The graph shows a steady increase in the Average sale price from the 1970’s to 1980’s. In the mid 1980’s there is a clear uptick in the average sold price until the until the Great Recession in 2008. From then until present day we see a drastic increase in the average sale price. 
+![Time Series Graph](https://github.com/jkehm/group9/blob/main/Images/Time%20Series%20of%20House%20Sale%20Price%20by%20Year.png)
+
+One of the first questions the team asked when we started digging into the data was if there is a correlation between the Heated area (square footage) and the sale price. A scatter plot was created that can be seen below. It is clear there is a fairly strong positive correlation between these factors. In order to put a number to it, we created a correlation dataframe which can be seen below. The strongest influences for Total Sale Price is Heated Area (0.683), Year Sold (0.560), and the Year Built (0.351).
+
+<p align="center">
+  <img width="720" height="480" src="https://github.com/jkehm/group9/blob/main/Images/relationship%20between%20heated%20area%20and%20sales%20price.png">
+</p>
+
+![Correltaion DF](https://github.com/jkehm/group9/blob/main/Images/correlation%20dataframe.png)
+
+Lastly, the team was curious to see how some of the data is distributed. The first image below is of the Year Built boxplot. This shows that there has been a massive building boom in Wake County right around the year 2000. The heatead area boxplot shows the distribution of the size of homes in Wake county. It would be interesting to do some further investigation with the Heated Area boxplot and compare the the distribution for the last few decades, and see how the size of homes has changed. 
+
+<p align="center">
+  <img width="720" height="480" src="https://github.com/jkehm/group9/blob/main/Images/year%20built%20box%20plot.png">
+</p>
+<p align="center">
+  <img width="720" height="480" src="https://github.com/jkehm/group9/blob/main/Images/heated%20area%20boxplot.png">
+</p>
 
 #### Questions the Team wants to answer with this data:
 * Create a machine learning model that can predict the price of a house given certain input data
