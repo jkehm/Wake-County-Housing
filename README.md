@@ -78,9 +78,13 @@ Lastly, the team was curious to see how some of the data is distributed. The fir
 
 #### Machine Learning Model
 
-The way this dataset is designed does not allow for a Supervised Learning Classification model. This is because there is no discrete outcome for this data. 
+The way this dataset is designed does not allow for a Supervised Learning Classification model. This is because there is no discrete outcome for this data. We will utilize both a k-means clustering and linear regression model on this dataset. Both of these models have their benefits and drawbacks. 
 
-Instead, there are plenty of different clusters within our dataset that we can utilize. We can perform clustering with the K-Means Algorithm. We would define the number of clusters (k) as the number of unique cities or zip codes we have. Once this has been clustered, we can see if there are any other relationships between other inputs, such as Sold Price for homes. From here we will be able to create several different visualitzations with the machine learning data. 
+There are plenty of different clusters within our dataset that we can utilize. We can perform clustering with the K-Means Algorithm. We would define the number of clusters (k) as the number of unique cities or zip codes we have. Once this has been clustered, we can see if there are any other relationships between other inputs, such as Sold Price for homes. From here we will be able to create several different visualitzations with the machine learning data. The advantages of k-Means clustering include being able to scale to large data sets, gurantees convergence, easily adapts to new examples, and generalizes to clusters of different shapes and sizes. 
+There are a few situations where k-Means clustering does struggle. For example, when clustering data of varying sizes and density, clustering outliers, and having to manually choose the optimal amount of k clusters. Eventhough, in this dataset the amount of clusters we will create is fairly clear considering we plan to cluster by Zip Code. 
+
+The Linear regression model is a simple way to show the relationship between HEATED AREA, Total_sale_Price, city and zip codes. Linear Regression models also make it easy to handle the large dataset.
+The assumptions of a linear regression model makes it difficult to obtain accurate information in showing the relationship between HEATED_AREA' and 'Total_sale_Price. Therefore, you need different models to obtain accurate predictions. We used the linear regression model, because it will allow for predictions given certain inputs. The team was also able to Visualize the relationship of Square Footage vs. Total Sale Price with a line graph.
 
 #### Database and ERD
 
