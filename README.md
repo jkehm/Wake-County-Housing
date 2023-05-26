@@ -95,7 +95,7 @@ ERD:
 </p>
 
 
-Using PostgreSQL created the three tables shown in the ERD. After creating those three tables, imported the cleaned csv files into the tables making sure the headers and data types aligned. Once those were successfully processed used queries to build more tables in our Final Project schema. The goal was to show information related to the Wake County cities, averages sale prices and square footage, and population.
+Using PostgreSQL created the three tables shown in the ERD. After creating those three tables, imported the cleaned csv files into the tables making sure the headers and data types aligned. Once those were successfully processed used queries to build more tables in our Final Project schema. The goal was to show information related to the Wake County cities, averages sale prices and square footage, and population. Additionally, we utilized AWS Relational Database Services to set up a Postgres database to interface with our Final Project. 
 
 - Year 1963 to 15 May 2023 Wake County Sale Price Data csv [here](https://github.com/jkehm/group9/blob/main/Resources/cleaned_wake_w_date_df.csv)
 - Last Decade Wake County Sale Price Data csv [here](https://github.com/jkehm/group9/blob/main/Resources/last_decade_df.csv)
