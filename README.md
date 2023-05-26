@@ -105,7 +105,9 @@ Example query to take the Physical City using the last decade to create a table 
 	FROM "Last_Decade_WakeCounty"
 	GROUP BY "PHYSICAL_CITY", year
 	ORDER BY year ASC;
-
+	
+#### Description of Dashboard
+The group will utilize Tableau in order to create this dashboard. We will create a map where the user can interactively scroll over Zip Codes within Wake County. Once the county is scrolled over a snippet of the data regarding the county will be appear.
 
 #### Technologies, Languages, and Tools used
 * Jupyter Notebook
