@@ -90,7 +90,9 @@ The assumptions of a linear regression model makes it difficult to obtain accura
 
 ERD:
 
-![QuickDBD-export](https://github.com/jkehm/group9/assets/119149740/3f704f05-f847-465d-b6c8-266ebc6b4bff)
+<p align="center">
+  <img width="720" height="480" src="https://github.com/jkehm/group9/assets/119149740/019df8f5-0880-4be3-9c54-49eca415d349">
+</p>
 
 
 Using PostgreSQL created the three tables shown in the ERD. After creating those three tables, imported the cleaned csv files into the tables making sure the headers and data types aligned. Once those were successfully processed used queries to build more tables in our Final Project schema. The goal was to show information related to the Wake County cities, averages sale prices and square footage, and population.
