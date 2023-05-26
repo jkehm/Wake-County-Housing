@@ -41,7 +41,7 @@ The dataset contains data for all recorded Real Estate history in Wake County up
 * Exported datasets
 
 #### Data Analysis Phase
-Once the data was cleaned the team was able to dig further into the data and start looking for relationships between data points, and create some visualizations. Below are two scatter plots. The first one shows the Total Sale Price vs Total Heated area. Once the team applied filters to remove outliers our data looked much more precise than it had previously. 
+Once the data was cleaned the team was able to dig further into the data and start looking for relationships between data points, and create some visualizations. The scatter plot below shows the Total Sale Price vs Total Heated area. Once the team applied filters to remove outliers our data looked much more precise than it had previously. 
 
 <p align="center">
    <img width="720" height="480"  src="https://github.com/jkehm/group9/blob/main/Images/Total%20Sale%20Price%20vs%20Total%20Square%20Foot%20Scatter.png">
