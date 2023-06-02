@@ -20,8 +20,9 @@
 Our team interest is to work on something that is personal to us, and something we can relate to. With that in mind, our team members are all from a city in Wake County, or currently reside there. For those not familiar with Wake County, it contains North Carolina's capital city, Raleigh, as well as other popular cities Cary, Apex, Holly Springs, and Morrisville. The housing market has been nothing short of hectic the last few years and Raleigh is one of the most rapidly growing cities in the United States. The team is curious to see if this rapid growth has been reflected in the housing market, and if we can offer some insight to the people moving to the Triangle. 
 
 #### Data Exploration and Cleaning Phase
-This dataset was pulled from the Wake County Government website. Which can be found [here](https://www.wake.gov/departments-government/tax-administration/data-files-statistics-and-reports/real-estate-property-data-files).
-The dataset contains data for all recorded Real Estate history in Wake County up to 5/13/2023 (the day we downloaded the .csv file). This leaves the team with a very large dataset, and a lot of data that is not relevant to us. The dataset size before any cleaning was performed is 439,031 rows x 87 columns. A lot of these columns were either missing data completely, had a lot of null values, or was not relevant to our project goals. The team dropped most of the columns we started with. The steps the team used for our data cleaning is below, and the Jupyter Notebook that was used can be found [here](https://github.com/jkehm/group9/blob/main/Notebooks/Cleaning_Data_JAK.ipynb)
+The main dataset was pulled from the Wake County Government website. Which can be found [here](https://www.wake.gov/departments-government/tax-administration/data-files-statistics-and-reports/real-estate-property-data-files). From the same source, a [GeoJSON file](https://data.wakegov.com/datasets/Wake::zip-codes/explore?location=35.832815%2C-78.715928%2C3.54) was used to build the Tableau Interactive Map. Additionally, we utilized Wake County population data that can be found [here](https://demography.osbm.nc.gov/explore/dataset/2021-standard-population-estimates/table/?disjunctive.county&disjunctive.muniname2&sort=county&refine.county=Wake).
+
+The main dataset contains data for all recorded Real Estate history in Wake County up to 5/13/2023 (the day we downloaded the .csv file). This leaves the team with a very large dataset, and a lot of data that is not relevant to us. The dataset size before any cleaning was performed is 439,031 rows x 87 columns. A lot of these columns were either missing data completely, had a lot of null values, or was not relevant to our project goals. The team dropped most of the columns we started with. The steps the team used for our data cleaning is below, and the Jupyter Notebook that was used can be found [here](https://github.com/jkehm/group9/blob/main/Notebooks/Cleaning_Data_JAK.ipynb)
 
 * Figure out dimensions of the entire dataset
 * Look which columns could be relevant to our analysis
@@ -84,7 +85,7 @@ There are plenty of different clusters within our dataset that we can utilize. W
 There are a few situations where k-Means clustering does struggle. For example, when clustering data of varying sizes and density, clustering outliers, and having to manually choose the optimal amount of k clusters. Eventhough, in this dataset the amount of clusters we will create is fairly clear considering we plan to cluster by Zip Code. 
 
 The Linear regression model is a simple way to show the relationship between HEATED AREA, Total_sale_Price, city and zip codes. Linear Regression models also make it easy to handle the large dataset.
-The assumptions of a linear regression model makes it difficult to obtain accurate information in showing the relationship between HEATED_AREA' and 'Total_sale_Price. Therefore, you need different models to obtain accurate predictions. We used the linear regression model, because it will allow for predictions given certain inputs. The team was also able to Visualize the relationship of Square Footage vs. Total Sale Price with a line graph.
+The assumptions of a linear regression model makes it difficult to obtain accurate information in showing the relationship between HEATED_AREA' and 'Total_sale_Price'. Therefore, you need different models to obtain accurate predictions. We used the linear regression model, because it will allow for predictions given certain inputs. The team was also able to Visualize the relationship of Square Footage vs. Total Sale Price with a line graph.
 
 #### Database and ERD
 
@@ -137,7 +138,12 @@ Example query to combine two tables in our database.
 	ORDER BY physical_city ASC;
 	
 #### Description of Dashboard
-The group will utilize Tableau in order to create this dashboard. We will create a map where the user can interactively scroll over Zip Codes within Wake County. Once the county is scrolled over a snippet of the data regarding the county will be appear.
+The group utilized Tableau in order to create this dashboard. An interactive map was created where the user can interactively scroll over Zip Codes within Wake County. Once the county is scrolled over a snippet of the data regarding the county will be appear. This map can be seen below. Additionally, the entire Tableau Story can be found [here.](https://public.tableau.com/app/profile/justin.kehm/viz/WakeCountyAvgSalesPriceDashboard/Story1?publish=yes)
+
+https://github.com/jkehm/group9/assets/73975096/0e917c67-48b6-4bf9-b5ba-a93b21119c25
+
+#### Presentation and Google Slides
+The link to our Final Google Slides Presentation can be found [here](https://docs.google.com/presentation/d/1y0o_X7_Fj14qmu2ATZ1sDu5WMu9wZab2qyRHnucsdYk/edit?usp=sharing).
 
 #### Technologies, Languages, and Tools used
 * Jupyter Notebook
