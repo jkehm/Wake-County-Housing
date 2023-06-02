@@ -116,10 +116,6 @@ Retrieved/fetched the data from PostgreSQL table that is connected to AWS. Then 
 	df_wake = pd.DataFrame(data)
 	conn.close()
 
-- Year 1963 to 15 May 2023 Wake County Sale Price Data csv [here](https://github.com/jkehm/group9/blob/main/Resources/cleaned_wake_w_date_df.csv)
-- Last Decade Wake County Sale Price Data csv [here](https://github.com/jkehm/group9/blob/main/Resources/last_decade_df.csv)
-- Wake County Population 2020 csv [here](https://github.com/jkehm/group9/blob/main/Resources/Clean_WCpopulation-estimates.csv)
-
 Example query to combine two tables in our database.
 
 	SELECT DISTINCT ON (ld.physical_city)
