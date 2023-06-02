@@ -134,7 +134,7 @@ Example query to combine two tables in our database.
 	ORDER BY physical_city ASC;
 	
 #### Description of Dashboard
-The group utilized Tableau in order to create this dashboard. An interactive map was created where the user can interactively scroll over Zip Codes within Wake County. Once the county is scrolled over a snippet of the data regarding the county will be appear. This map can be seen below. Additionally, the entire Tableau Story can be found [here.](https://public.tableau.com/app/profile/justin.kehm/viz/WakeCountyAvgSalesPriceDashboard/Story1?publish=yes)
+The group utilized Tableau in order to create this dashboard. An interactive map was created where the user can interactively scroll over Zip Codes within Wake County. Once the county is clicked on a snippet of the data regarding the county will be appear. This map can be seen below. Additionally, the entire Tableau Story can be found [here.](https://public.tableau.com/app/profile/justin.kehm/viz/WakeCountyAvgSalesPriceDashboard/Story1?publish=yes)
 
 https://github.com/jkehm/group9/assets/73975096/0e917c67-48b6-4bf9-b5ba-a93b21119c25
 
