@@ -97,7 +97,7 @@ ERD:
 
 Using PostgreSQL created the three tables shown in the ERD. After creating those three tables, imported the cleaned csv files into the tables making sure the headers and data types aligned. Once those were successfully processed used queries to build more tables in our Final Project schema. The goal was to show information related to the Wake County cities, averages sale prices and square footage, and population. 
 
-Additionally, we utilized AWS Relational Database Services to set up a Postgres database to interface with our Final Project. Used psycopg2 to establish the connection between our database and a machine learning model.
+Additionally, we utilized AWS Relational Database Services to establish a connection to Postgres database to interface with our Final Project. Used psycopg2 to establish the connection between our database and a machine learning model.
 
 	conn = psy.connect(database="-",
                         host="-",
@@ -119,16 +119,22 @@ Retrieved/fetched the data from PostgreSQL table that is connected to AWS. Then 
 - Last Decade Wake County Sale Price Data csv [here](https://github.com/jkehm/group9/blob/main/Resources/last_decade_df.csv)
 - Wake County Population 2020 csv [here](https://github.com/jkehm/group9/blob/main/Resources/Clean_WCpopulation-estimates.csv)
 
-Example query to take the Physical City using the last decade to create a table showing the averages sale prce and heated area (square footage) by year.
+Example query to combine two tables in our database.
 
-	SELECT "PHYSICAL_CITY",
-		year,
-		COUNT(*) AS How_Many,
-		AVG("Total_sale_Price") as Avg_Sale_Price,
-		AVG("HEATED_AREA") as Avg_SqFt
-	FROM "Last_Decade_WakeCounty"
-	GROUP BY "PHYSICAL_CITY", year
-	ORDER BY year ASC;
+	SELECT DISTINCT ON (ld.physical_city)
+	    ld.physical_city,
+	    ld.year,
+	    AVG(ld.total_sale_price) as average_sales_price,
+	    AVG(ld.heated_area) as average_sqfeet,
+	    wp.population
+	INTO combinedpop
+	FROM lastdecadewakecounty as ld
+	LEFT JOIN wakecountypopulation as wp
+	    ON (ld.physical_city = wp.physical_city)
+	WHERE (ld.year='2021')
+	    AND (wp.year='2021')
+	GROUP BY ld.physical_city, ld.year, wp.population
+	ORDER BY physical_city ASC;
 	
 #### Description of Dashboard
 The group will utilize Tableau in order to create this dashboard. We will create a map where the user can interactively scroll over Zip Codes within Wake County. Once the county is scrolled over a snippet of the data regarding the county will be appear.
