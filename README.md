@@ -155,3 +155,33 @@ The link to our Final Google Slides Presentation can be found [here](https://doc
 * GitHub
 * PostgreSQL
 * Tableau
+
+#### Results
+* How has the average total sale price changed over time?
+	- **Time series of house sale price by year shows a steady increase for the first 40 years, a slowdown during the Great Recession (2007-2008), and a drastic increase in the years since**
+* Any outliers in heated area (sq. feet) and sale prices? 
+	- **Yes, it was removed to offer a cleaner dataset**
+* How does the deeded acreage distribution differ among various cities?
+	- **Clayton: average acreage at 0.88**
+	- **Morrisville: average acreage at 0.13**
+* What is the month in which highest number of homes sales occur?
+	- **2022: July had the highest number of homes sold and highest average sale price**
+* What factors have the biggest influence in Sales Price?
+	- **Heated Area (0.683), Year Sold (0.560), and the Year Built (0.351)**
+* The largest cities in Wake County?
+	- **Raleigh (2021): population ~ 470,000, Avg Sale Price $494,058.74, Avg Sq. Feet of Home 2,501.84**
+	- **Cary (2021): population ~ 174,000, Avg Sale Price $399,701.26, Avg Sq. Feet of Home 2,105.97**
+
+#### Looking Back
+* Recommendation fro Future Analysis
+	- Population versus amount of houses sold
+	- Where are the people moving to Wake County coming from
+	- Average income in the area compared to the housing market
+	- COVID impact on 2020 onward
+	- Compare Wake County to other counties such as Mecklenburg County, NC
+
+* What we would do differently
+	- If given more time the team would have liked to dive further into the data to see if there are any other relevant factors
+	- Including other datasets to see if there is a relation between crime (or something similar) to Total Sales Price
+
+
