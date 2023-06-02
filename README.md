@@ -96,7 +96,7 @@ ERD:
 </p>
 
 
-Using PostgreSQL created the three tables shown in the ERD. After creating those three tables, imported the cleaned csv files into the tables making sure the headers and data types aligned. Once those were successfully processed used queries to build more tables in our Final Project schema. The goal was to show information related to the Wake County cities, averages sale prices and square footage, and population. 
+Using PostgreSQL created the three tables (lastdecadewakecounty, wakecountycleanedwdate, and wakecountypopulation) shown in the ERD. After creating those three tables, imported the cleaned csv files into the tables making sure the headers and data types aligned. Once those were successfully processed used queries to build more tables and used a join from the lastdecadewakecounty and wakecountypopulation tables to create new table called combinedpop. The goal was to show information related to the Wake County cities, averages sale prices and square footage, and population. 
 
 Additionally, we utilized AWS Relational Database Services to establish a connection to Postgres database to interface with our Final Project. Used psycopg2 to establish the connection between our database and a machine learning model.
 
