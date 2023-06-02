@@ -91,11 +91,29 @@ The assumptions of a linear regression model makes it difficult to obtain accura
 ERD:
 
 <p align="center">
-  <img width="720" height="480" src="https://github.com/jkehm/group9/assets/119149740/019df8f5-0880-4be3-9c54-49eca415d349">
+  <img width="720" height="480" src="https://github.com/jkehm/group9/assets/119149740/a6c01ea0-4db5-44b7-add4-426d8680a5c1">
 </p>
 
 
-Using PostgreSQL created the three tables shown in the ERD. After creating those three tables, imported the cleaned csv files into the tables making sure the headers and data types aligned. Once those were successfully processed used queries to build more tables in our Final Project schema. The goal was to show information related to the Wake County cities, averages sale prices and square footage, and population. Additionally, we utilized AWS Relational Database Services to set up a Postgres database to interface with our Final Project. 
+Using PostgreSQL created the three tables shown in the ERD. After creating those three tables, imported the cleaned csv files into the tables making sure the headers and data types aligned. Once those were successfully processed used queries to build more tables in our Final Project schema. The goal was to show information related to the Wake County cities, averages sale prices and square footage, and population. 
+
+Additionally, we utilized AWS Relational Database Services to set up a Postgres database to interface with our Final Project. Used psycopg2 to establish the connection between our database and a machine learning model.
+
+	conn = psy.connect(database="-",
+                        host="-",
+                        user="postgresgroup9",
+                        password="-",
+                        port="5432")
+
+	print(conn)
+	
+Retrieved/fetched the data from PostgreSQL table that is connected to AWS. Then had to update the column names in the DataFrame.
+
+	cur = conn.cursor()
+	cur.execute("select * from wakecountycleanedwdate")
+	data = cur.fetchall()
+	df_wake = pd.DataFrame(data)
+	conn.close()
 
 - Year 1963 to 15 May 2023 Wake County Sale Price Data csv [here](https://github.com/jkehm/group9/blob/main/Resources/cleaned_wake_w_date_df.csv)
 - Last Decade Wake County Sale Price Data csv [here](https://github.com/jkehm/group9/blob/main/Resources/last_decade_df.csv)
